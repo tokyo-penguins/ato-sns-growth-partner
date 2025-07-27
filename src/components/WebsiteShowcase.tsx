@@ -1,10 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Gift } from "lucide-react";
-
 const WebsiteShowcase = () => {
-  return (
-    <section className="py-20 bg-gradient-subtle">
+  return <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Special Offer Header */}
         <div className="text-center mb-16">
@@ -44,12 +42,7 @@ const WebsiteShowcase = () => {
                       </div>
                       
                       {/* Website Content */}
-                      <iframe
-                        src="https://examplewebsite.com"
-                        className="w-full h-64 border-0"
-                        title="Website Sample"
-                        loading="lazy"
-                      />
+                      <iframe src="https://examplewebsite.com" className="w-full h-64 border-0" title="Website Sample" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -103,39 +96,15 @@ const WebsiteShowcase = () => {
 
         {/* Additional Benefits */}
         <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
-          <Card className="text-center hover:shadow-elegant transition-all duration-300 border-border/50">
-            <CardContent className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary font-bold">1</span>
-              </div>
-              <h4 className="font-semibold mb-2 text-foreground">デザイン設計</h4>
-              <p className="text-sm text-muted-foreground">ブランドイメージに合わせたオリジナルデザイン</p>
-            </CardContent>
-          </Card>
+          
+
+          
 
           <Card className="text-center hover:shadow-elegant transition-all duration-300 border-border/50">
-            <CardContent className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary font-bold">2</span>
-              </div>
-              <h4 className="font-semibold mb-2 text-foreground">開発・構築</h4>
-              <p className="text-sm text-muted-foreground">最新技術を使用した高性能Webサイト</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-elegant transition-all duration-300 border-border/50">
-            <CardContent className="p-6">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary font-bold">3</span>
-              </div>
-              <h4 className="font-semibold mb-2 text-foreground">運用サポート</h4>
-              <p className="text-sm text-muted-foreground">継続的なメンテナンスとアップデート</p>
-            </CardContent>
+            
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WebsiteShowcase;

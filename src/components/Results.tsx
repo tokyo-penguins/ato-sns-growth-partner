@@ -1,19 +1,33 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Users, PlayCircle, Heart, MessageCircle, Share2 } from "lucide-react";
-
 const Results = () => {
   // Simulated growth data for the chart
-  const chartData = [
-    { month: "開始", followers: 2000, views: 50000 },
-    { month: "1ヶ月", followers: 15000, views: 200000 },
-    { month: "2ヶ月", followers: 28000, views: 450000 },
-    { month: "3ヶ月", followers: 45000, views: 800000 },
-    { month: "4ヶ月", followers: 65000, views: 1200000 },
-    { month: "5ヶ月", followers: 80000, views: 1600000 }
-  ];
-
-  return (
-    <section id="results" className="py-20 bg-background">
+  const chartData = [{
+    month: "開始",
+    followers: 2000,
+    views: 50000
+  }, {
+    month: "1ヶ月",
+    followers: 15000,
+    views: 200000
+  }, {
+    month: "2ヶ月",
+    followers: 28000,
+    views: 450000
+  }, {
+    month: "3ヶ月",
+    followers: 45000,
+    views: 800000
+  }, {
+    month: "4ヶ月",
+    followers: 65000,
+    views: 1200000
+  }, {
+    month: "5ヶ月",
+    followers: 80000,
+    views: 1600000
+  }];
+  return <section id="results" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -36,7 +50,9 @@ const Results = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-br from-accent to-accent/80 text-white border-0 shadow-glow animate-scale-in" style={{ animationDelay: "0.2s" }}>
+          <Card className="bg-gradient-to-br from-accent to-accent/80 text-white border-0 shadow-glow animate-scale-in" style={{
+          animationDelay: "0.2s"
+        }}>
             <CardContent className="p-8 text-center">
               <PlayCircle className="w-16 h-16 mx-auto mb-4 opacity-90" />
               <div className="text-5xl font-bold mb-2">3,260万</div>
@@ -49,42 +65,7 @@ const Results = () => {
         {/* Growth Chart Visualization */}
         <div className="max-w-6xl mx-auto mb-16">
           <Card className="shadow-elegant border-border/50">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
-                フォロワー成長グラフ（5ヶ月間）
-              </h3>
-              
-              {/* Custom Chart */}
-              <div className="relative">
-                <div className="flex items-end justify-between h-64 bg-gradient-subtle rounded-lg p-6">
-                  {chartData.map((data, index) => (
-                    <div key={index} className="flex flex-col items-center w-full">
-                      <div 
-                        className="bg-gradient-primary rounded-t-lg mb-2 transition-all duration-1000 animate-slide-up"
-                        style={{ 
-                          height: `${(data.followers / 80000) * 200}px`,
-                          animationDelay: `${index * 0.2}s`
-                        }}
-                      />
-                      <div className="text-xs font-medium text-muted-foreground mb-1">
-                        {data.followers.toLocaleString()}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {data.month}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Growth Arrow */}
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center text-primary">
-                    <TrendingUp className="w-6 h-6 mr-2" />
-                    <span className="font-bold">+3,900% 成長</span>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
+            
           </Card>
         </div>
 
@@ -115,8 +96,6 @@ const Results = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Results;
