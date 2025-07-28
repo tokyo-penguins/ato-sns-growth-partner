@@ -1,20 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
-import problem1 from "@/assets/problem1.jpg";
-import problem2 from "@/assets/problem2.jpg";
+import { Users, Clock, Lightbulb } from "lucide-react";
 
 const Problems = () => {
   const problems = [{
-    image: problem1,
+    icon: Users,
     title: "フォロワーが増えない",
     description: "投稿しても反応が薄く、なかなかフォロワーが増えずに悩んでいませんか？効果的なコンテンツ戦略で確実に成長させます。",
     solution: "データ分析に基づいた戦略的投稿とターゲティングで、5ヶ月で8万フォロワー達成の実績があります。"
   }, {
-    image: problem2,
+    icon: Clock,
     title: "運用に時間が取れない",
     description: "本業が忙しくてSNS運用まで手が回らない。質の高いコンテンツを継続的に投稿するのが困難ではありませんか？",
     solution: "完全代行サービスで、企画から投稿、分析まで全てお任せ。あなたは本業に集中できます。"
   }, {
-    image: problem1,
+    icon: Lightbulb,
     title: "何を投稿すべきかわからない",
     description: "どんなコンテンツが効果的なのか、投稿のタイミングや頻度など、戦略が分からずに困っていませんか？",
     solution: "プロのコンテンツプランナーが業界分析と競合調査を基に、最適なコンテンツ戦略を立案します。"
@@ -38,11 +37,9 @@ const Problems = () => {
         }}>
               <CardContent className="p-6 md:p-8">
                 <div className="flex justify-center mb-6">
-                  <img 
-                    src={problem.image} 
-                    alt={problem.title}
-                    className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full shadow-lg"
-                  />
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-primary/10 rounded-full flex items-center justify-center">
+                    <problem.icon className="w-10 h-10 md:w-12 md:h-12 text-primary" />
+                  </div>
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-4 text-foreground text-center">
                   {problem.title}

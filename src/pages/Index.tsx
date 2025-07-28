@@ -6,6 +6,7 @@ import WebsiteShowcase from "@/components/WebsiteShowcase";
 import Pricing from "@/components/Pricing";
 import Flow from "@/components/Flow";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <Pricing />
       <Flow />
       <About />
+      <Contact />
       <Footer />
     </div>
   );

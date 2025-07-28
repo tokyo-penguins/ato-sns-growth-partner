@@ -31,11 +31,17 @@ const Header = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
               代表挨拶
             </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              お問い合わせ
+            </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300">
+            <Button 
+              className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               お問い合わせ
             </Button>
           </div>
@@ -64,7 +70,16 @@ const Header = () => {
               <a href="#about" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                 代表挨拶
               </a>
-              <Button className="bg-gradient-primary text-white mt-4">
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+                お問い合わせ
+              </a>
+              <Button 
+                className="bg-gradient-primary text-white mt-4"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 お問い合わせ
               </Button>
             </nav>
