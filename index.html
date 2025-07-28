@@ -1,24 +1,677 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ato-sns-growth-partner</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATO - SNS運用代行サービス</title>
+    <meta name="description" content="プロフェッショナルなSNS運用代行で、あなたのビジネスを次のレベルへ導きます">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">ATO</div>
+                    <div class="logo-subtitle">SNS戦略運用代行</div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="#problems" class="nav-link">お悩み解決</a>
+                    <a href="#results" class="nav-link">実績</a>
+                    <a href="#pricing" class="nav-link">料金プラン</a>
+                    <a href="#flow" class="nav-link">ご利用の流れ</a>
+                    <a href="#about" class="nav-link">代表挨拶</a>
+                    <a href="#contact" class="nav-link">お問い合わせ</a>
+                </nav>
 
-    <meta property="og:title" content="ato-sns-growth-partner" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <button class="cta-btn desktop-cta" onclick="scrollToContact()">お問い合わせ</button>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                    <span class="close-icon">✕</span>
+                </button>
+            </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            <div class="mobile-nav" id="mobileNav">
+                <nav class="mobile-nav-content">
+                    <a href="#problems" class="mobile-nav-link" onclick="closeMobileMenu()">お悩み解決</a>
+                    <a href="#results" class="mobile-nav-link" onclick="closeMobileMenu()">実績</a>
+                    <a href="#pricing" class="mobile-nav-link" onclick="closeMobileMenu()">料金プラン</a>
+                    <a href="#flow" class="mobile-nav-link" onclick="closeMobileMenu()">ご利用の流れ</a>
+                    <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">代表挨拶</a>
+                    <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">お問い合わせ</a>
+                    <button class="cta-btn mobile-cta" onclick="scrollToContact(); closeMobileMenu();">お問い合わせ</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    SNS運用で
+                    <span class="gradient-text">ビジネスを加速</span>
+                </h1>
+                <p class="hero-subtitle">
+                    プロフェッショナルなSNS運用代行で、あなたのブランドを次のレベルへ
+                </p>
+            </div>
+
+            <div class="achievement-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">8万</div>
+                    <div class="stat-label">フォロワー達成</div>
+                    <div class="stat-sublabel">わずか5ヶ月で</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">▶️</div>
+                    <div class="stat-number">3,260万</div>
+                    <div class="stat-label">動画視聴回数</div>
+                    <div class="stat-sublabel">累計実績</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-number">500%</div>
+                    <div class="stat-label">エンゲージメント向上</div>
+                    <div class="stat-sublabel">平均成長率</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="scrollToContact()">無料相談を始める</button>
+                <button class="btn btn-outline" onclick="scrollToResults()">実績を見る</button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="problems">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    こんなお悩みを<span class="gradient-text">解決</span>します
+                </h2>
+                <p class="section-subtitle">
+                    多くの企業が抱えるSNS運用の課題を、私たちの専門的なサービスで解決いたします
+                </p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">👥</div>
+                    <h3 class="problem-title">フォロワーが増えない</h3>
+                    <p class="problem-description">
+                        投稿しても反応が薄く、なかなかフォロワーが増えずに悩んでいませんか？効果的なコンテンツ戦略で確実に成長させます。
+                    </p>
+                    <div class="solution-box">
+                        <p class="solution-label">ATOの解決策</p>
+                        <p class="solution-text">
+                            データ分析に基づいた戦略的投稿とターゲティングで、5ヶ月で8万フォロワー達成の実績があります。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3 class="problem-title">運用に時間が取れない</h3>
+                    <p class="problem-description">
+                        本業が忙しくてSNS運用まで手が回らない。質の高いコンテンツを継続的に投稿するのが困難ではありませんか？
+                    </p>
+                    <div class="solution-box">
+                        <p class="solution-label">ATOの解決策</p>
+                        <p class="solution-text">
+                            完全代行サービスで、企画から投稿、分析まで全てお任せ。あなたは本業に集中できます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">💡</div>
+                    <h3 class="problem-title">何を投稿すべきかわからない</h3>
+                    <p class="problem-description">
+                        どんなコンテンツが効果的なのか、投稿のタイミングや頻度など、戦略が分からずに困っていませんか？
+                    </p>
+                    <div class="solution-box">
+                        <p class="solution-label">ATOの解決策</p>
+                        <p class="solution-text">
+                            プロのコンテンツプランナーが業界分析と競合調査を基に、最適なコンテンツ戦略を立案します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    圧倒的な<span class="gradient-text">実績</span>
+                </h2>
+                <p class="section-subtitle">
+                    数字が証明する、ATOのSNS運用代行の実力
+                </p>
+            </div>
+
+            <div class="main-achievements">
+                <div class="achievement-card primary">
+                    <div class="achievement-icon">👥</div>
+                    <div class="achievement-number">8万</div>
+                    <div class="achievement-label">フォロワー達成</div>
+                    <div class="achievement-description">わずか5ヶ月という短期間で達成</div>
+                </div>
+                <div class="achievement-card accent">
+                    <div class="achievement-icon">▶️</div>
+                    <div class="achievement-number">3,260万</div>
+                    <div class="achievement-label">動画視聴回数</div>
+                    <div class="achievement-description">累計動画視聴数の実績</div>
+                </div>
+            </div>
+
+            <div class="additional-metrics">
+                <div class="metric-card">
+                    <div class="metric-icon">❤️</div>
+                    <div class="metric-number">4.8M</div>
+                    <div class="metric-label">累計いいね数</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">💬</div>
+                    <div class="metric-number">850K</div>
+                    <div class="metric-label">エンゲージメント数</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📤</div>
+                    <div class="metric-number">320K</div>
+                    <div class="metric-label">シェア数</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Showcase Section -->
+    <section class="website-showcase">
+        <div class="container">
+            <div class="showcase-header">
+                <div class="special-offer-badge">
+                    <span class="badge-icon">🎁</span>
+                    <span class="badge-text">特別特典</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="gradient-text">20万円相当</span>のWebサイトを無料提供
+                </h2>
+                <p class="section-subtitle">
+                    SNS運用代行をご契約いただいた方限定で、プロフェッショナルなWebサイトを無料で制作いたします
+                </p>
+            </div>
+
+            <div class="showcase-content">
+                <div class="website-preview">
+                    <div class="browser-frame">
+                        <div class="browser-chrome">
+                            <div class="browser-dots">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="address-bar">
+                                <span>examplewebsite.com</span>
+                            </div>
+                        </div>
+                        <iframe src="https://examplewebsite.com" class="website-iframe" title="Website Sample"></iframe>
+                    </div>
+                </div>
+
+                <div class="showcase-details">
+                    <h3 class="details-title">高品質なWebサイトを追加費用なしで</h3>
+                    <ul class="features-list">
+                        <li>レスポンシブデザイン対応</li>
+                        <li>SEO最適化済み</li>
+                        <li>高速ページ読み込み</li>
+                        <li>コンテンツ管理システム</li>
+                        <li>SNSとの連携機能</li>
+                    </ul>
+                    
+                    <div class="price-highlight">
+                        <p class="regular-price">通常価格: ¥200,000</p>
+                        <p class="free-text">SNS運用代行契約で <strong>完全無料</strong></p>
+                    </div>
+
+                    <button class="btn btn-primary showcase-btn">
+                        🔗 サンプルサイトを見る
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    料金<span class="gradient-text">プラン</span>
+                </h2>
+                <p class="section-subtitle">
+                    あなたのビジネス規模と目標に合わせて最適なプランをお選びください
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header basic">
+                        <div class="plan-icon">⚡</div>
+                        <h3 class="plan-name">Basic</h3>
+                        <div class="plan-price">
+                            <span class="price">¥98,000</span>
+                            <span class="period">/月</span>
+                        </div>
+                        <p class="plan-description">SNS運用を始めたい企業様におすすめ</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ 月20投稿まで</li>
+                            <li>✓ Instagram・Twitter運用</li>
+                            <li>✓ 基本的な画像・動画制作</li>
+                            <li>✓ 月次レポート</li>
+                            <li>✓ メールサポート</li>
+                            <li>✓ ハッシュタグ戦略</li>
+                        </ul>
+                        <button class="btn btn-outline plan-btn">Basicプランを選択</button>
+                    </div>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">最人気</div>
+                    <div class="plan-header standard">
+                        <div class="plan-icon">⭐</div>
+                        <h3 class="plan-name">Standard</h3>
+                        <div class="plan-price">
+                            <span class="price">¥198,000</span>
+                            <span class="period">/月</span>
+                        </div>
+                        <p class="plan-description">本格的にSNSマーケティングを行いたい企業様向け</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ 月40投稿まで</li>
+                            <li>✓ Instagram・Twitter・TikTok運用</li>
+                            <li>✓ プロレベルの画像・動画制作</li>
+                            <li>✓ 競合分析レポート</li>
+                            <li>✓ 電話・チャットサポート</li>
+                            <li>✓ インフルエンサー連携</li>
+                            <li>✓ 広告運用サポート</li>
+                            <li>✓ ライブ配信サポート</li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn">Standardプランを選択</button>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header premium">
+                        <div class="plan-icon">👑</div>
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price">
+                            <span class="price">¥398,000</span>
+                            <span class="period">/月</span>
+                        </div>
+                        <p class="plan-description">最高レベルのSNS戦略で圧倒的成果を目指す企業様向け</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ 無制限投稿</li>
+                            <li>✓ 全SNSプラットフォーム対応</li>
+                            <li>✓ 専属デザイナー・動画クリエイター</li>
+                            <li>✓ 週次詳細レポート</li>
+                            <li>✓ 24時間サポート</li>
+                            <li>✓ 専属アカウントマネージャー</li>
+                            <li>✓ バイラル戦略立案</li>
+                            <li>✓ メディア露出サポート</li>
+                            <li>✓ イベント企画・運営</li>
+                            <li>✓ 独自分析ツール提供</li>
+                        </ul>
+                        <button class="btn btn-outline plan-btn">Premiumプランを選択</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="common-benefits">
+                <div class="benefits-card">
+                    <h3 class="benefits-title">全プラン共通特典</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">✓ 初期費用無料</div>
+                        <div class="benefit-item">✓ 契約期間縛りなし</div>
+                        <div class="benefit-item">✓ 無料相談・戦略立案</div>
+                        <div class="benefit-item">✓ 成果保証制度</div>
+                    </div>
+                    <div class="special-benefit">
+                        🎁 ご契約特典：20万円相当のWebサイト制作を無料でご提供
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section id="flow" class="flow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    ご利用の<span class="gradient-text">流れ</span>
+                </h2>
+                <p class="section-subtitle">
+                    シンプルで分かりやすい4ステップでサービスを開始できます
+                </p>
+            </div>
+
+            <div class="flow-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">💬</div>
+                        <h3 class="step-title">お問い合わせ</h3>
+                        <p class="step-description">
+                            まずはお気軽にお問い合わせください。現在の課題やご要望をお聞かせください。
+                        </p>
+                        <ul class="step-details">
+                            <li>• 無料相談フォームまたはお電話</li>
+                            <li>• 現状のSNS運用状況をヒアリング</li>
+                            <li>• 目標設定とKPI確認</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">🧮</div>
+                        <h3 class="step-title">お見積もり・ご相談</h3>
+                        <p class="step-description">
+                            ヒアリング内容を基に、最適なプランとお見積もりをご提案いたします。
+                        </p>
+                        <ul class="step-details">
+                            <li>• 詳細な戦略プランのご提案</li>
+                            <li>• カスタマイズされた料金プラン</li>
+                            <li>• スケジュール調整と契約内容確認</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">▶️</div>
+                        <h3 class="step-title">作業開始・進捗確認</h3>
+                        <p class="step-description">
+                            契約後すぐに専門チームが作業を開始。定期的に進捗をご報告いたします。
+                        </p>
+                        <ul class="step-details">
+                            <li>• 専属チームのアサイン</li>
+                            <li>• コンテンツ制作開始</li>
+                            <li>• 週次・月次の進捗レポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-icon">💳</div>
+                        <h3 class="step-title">お支払い</h3>
+                        <p class="step-description">
+                            成果に応じた透明性の高い料金体系。月末締めの翌月末払いです。
+                        </p>
+                        <ul class="step-details">
+                            <li>• 月額固定料金制</li>
+                            <li>• 成果連動型オプション</li>
+                            <li>• 請求書発行とお支払い</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-cta">
+                <div class="cta-card">
+                    <h3 class="cta-title">今すぐ始めませんか？</h3>
+                    <p class="cta-description">
+                        無料相談は随時受け付けております。お気軽にお問い合わせください。
+                    </p>
+                    <div class="contact-info">
+                        <p>📞 お電話でのお問い合わせ: 03-1234-5678 (平日 9:00-18:00)</p>
+                        <p>✉️ メールでのお問い合わせ: info@ato-sns.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    代表<span class="gradient-text">挨拶</span>
+                </h2>
+                <p class="section-subtitle">
+                    あなたのビジネスの成功を心から願い、全力でサポートいたします
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="ceo-photo">
+                    <img src="daihyou.jpg" alt="ATO代表取締役" class="ceo-image">
+                </div>
+
+                <div class="about-message">
+                    <div class="ceo-info">
+                        <h3 class="ceo-name">田中 太郎</h3>
+                        <p class="ceo-title">株式会社ATO 代表取締役</p>
+                    </div>
+
+                    <div class="message-content">
+                        <p>はじめまして。株式会社ATO代表の田中と申します。</p>
+                        <p>私たちは、SNSマーケティングの力で日本の企業様の成長を支援することをミッションとしています。デジタル時代において、SNSは単なる情報発信ツールではなく、顧客との深いつながりを築く重要な資産です。</p>
+                        <p>これまで100社以上の企業様のSNS運用をお手伝いし、数多くの成功事例を創り出してまいりました。5ヶ月で8万フォロワー達成、3,260万回の動画視聴数など、数字が証明する確かな実績があります。</p>
+                        <p>私たちが大切にしているのは、単なる数字の向上だけではありません。お客様のブランド価値を高め、真のファンを育成し、持続可能な成長を実現することです。</p>
+                        <p class="message-emphasis">あなたのビジネスの成功が、私たちの最大の喜びです。一緒に素晴らしい未来を創造しましょう。</p>
+                    </div>
+
+                    <div class="signature">
+                        <div class="signature-name">田中 太郎</div>
+                        <div class="signature-title">株式会社ATO 代表取締役</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon-small">🏆</div>
+                    <h4 class="achievement-title-small">業界歴15年</h4>
+                    <p class="achievement-desc">デジタルマーケティング領域での豊富な経験</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon-small">👥</div>
+                    <h4 class="achievement-title-small">100社以上</h4>
+                    <p class="achievement-desc">多業種にわたるSNS運用実績</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon-small">📈</div>
+                    <h4 class="achievement-title-small">平均成長率600%</h4>
+                    <p class="achievement-desc">クライアントのフォロワー数向上実績</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon-small">❤️</div>
+                    <h4 class="achievement-title-small">顧客満足度98%</h4>
+                    <p class="achievement-desc">継続率の高いサービス品質</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">
+                    SNS運用に関するご相談やお見積もりなど、お気軽にお問い合わせください
+                </p>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="contact-card">
+                    <h3 class="form-title">お問い合わせフォーム</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">お名前 *</label>
+                            <input type="text" id="name" name="name" required placeholder="山田太郎">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">会社名・団体名 *</label>
+                            <input type="text" id="company" name="company" required placeholder="株式会社○○">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@company.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">電話番号（任意）</label>
+                            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 *</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="お問い合わせ内容をご記入ください。ご希望のプランやご相談内容など"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="howDidYouKnow">どこで知りましたか？（任意）</label>
+                            <select id="howDidYouKnow" name="howDidYouKnow">
+                                <option value="">選択してください</option>
+                                <option value="google">Google検索</option>
+                                <option value="sns">各SNS</option>
+                                <option value="friend">友人から</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">
+                            お問い合わせを送信
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-card">
+                    <h2 class="footer-cta-title">今すぐSNS運用を始めませんか？</h2>
+                    <p class="footer-cta-subtitle">
+                        無料相談で、あなたのビジネスに最適なSNS戦略をご提案いたします
+                    </p>
+                    <div class="footer-cta-buttons">
+                        <button class="btn btn-primary" onclick="scrollToContact()">無料相談を申し込む</button>
+                        <button class="btn btn-outline-white">資料をダウンロード</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <div class="footer-logo">ATO</div>
+                    <p class="company-description">
+                        プロフェッショナルなSNS運用代行で、あなたのビジネスを次のレベルへ導きます。
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">サービス</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram運用代行</a></li>
+                        <li><a href="#">Twitter運用代行</a></li>
+                        <li><a href="#">TikTok運用代行</a></li>
+                        <li><a href="#">SNS広告運用</a></li>
+                        <li><a href="#">コンテンツ制作</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">クイックリンク</h3>
+                    <ul class="footer-links">
+                        <li><a href="#problems">お悩み解決</a></li>
+                        <li><a href="#results">実績</a></li>
+                        <li><a href="#pricing">料金プラン</a></li>
+                        <li><a href="#flow">ご利用の流れ</a></li>
+                        <li><a href="#about">代表挨拶</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">お問い合わせ</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>03-1234-5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>info@ato-sns.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>東京都渋谷区渋谷1-1-1<br>渋谷ビル10F</span>
+                        </div>
+                    </div>
+                    <div class="business-hours">
+                        平日 9:00-18:00<br>
+                        土日祝日休み
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 株式会社ATO. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">特定商取引法に基づく表示</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
