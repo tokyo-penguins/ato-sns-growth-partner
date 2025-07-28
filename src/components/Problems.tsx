@@ -35,7 +35,9 @@ const Problems = () => {
           animationDelay: `${index * 0.2}s`
         }}>
               <CardContent className="p-8 text-center">
-                
+                <div className="flex justify-center mb-6">
+                  {problem.icon}
+                </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {problem.title}
                 </h3>
@@ -46,7 +48,9 @@ const Problems = () => {
                   <p className="text-sm font-medium text-primary">
                     ATOの解決策
                   </p>
-                  
+                  <p className="text-sm text-foreground mt-2">
+                    {problem.solution}
+                  </p>
                 </div>
               </CardContent>
             </Card>)}
