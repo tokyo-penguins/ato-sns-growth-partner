@@ -63,7 +63,7 @@ const Hero = () => {
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold shadow-glow">
               無料相談を始める
             </Button>
-            <Button variant="outline" size="lg" className="border-white hover:bg-white/10 px-8 py-4 text-lg font-semibold text-indigo-300">
+            <Button variant="outline" size="lg" className="border-white hover:bg-white/10 px-8 py-4 text-lg font-semibold text-purple-950">
               実績を見る
             </Button>
           </div>
