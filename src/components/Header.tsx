@@ -16,13 +16,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
-              サービス
+            <a href="#problems" className="text-foreground hover:text-primary transition-colors">
+              お悩み解決
             </a>
             <a href="#results" className="text-foreground hover:text-primary transition-colors">
               実績
             </a>
-            <a href="#plans" className="text-foreground hover:text-primary transition-colors">
+            <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
               料金プラン
             </a>
             <a href="#flow" className="text-foreground hover:text-primary transition-colors">
@@ -49,19 +49,19 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-border bg-white/95 backdrop-blur-lg">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-foreground hover:text-primary transition-colors py-2">
-                サービス
+              <a href="#problems" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+                お悩み解決
               </a>
-              <a href="#results" className="text-foreground hover:text-primary transition-colors py-2">
+              <a href="#results" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                 実績
               </a>
-              <a href="#plans" className="text-foreground hover:text-primary transition-colors py-2">
+              <a href="#pricing" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                 料金プラン
               </a>
-              <a href="#flow" className="text-foreground hover:text-primary transition-colors py-2">
+              <a href="#flow" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                 ご利用の流れ
               </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors py-2">
+              <a href="#about" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                 代表挨拶
               </a>
               <Button className="bg-gradient-primary text-white mt-4">

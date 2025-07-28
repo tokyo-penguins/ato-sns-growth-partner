@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, TrendingUp, Heart } from "lucide-react";
-import ceoPhoto from "@/assets/ceo-photo.jpg";
+import daihyou from "@/assets/daihyou.jpg";
 
 const About = () => {
   const achievements = [
@@ -46,7 +46,7 @@ const About = () => {
                 {/* CEO Photo */}
                 <div className="relative">
                   <img 
-                    src={ceoPhoto}
+                    src={daihyou}
                     alt="ATO代表取締役"
                     className="w-full h-full object-cover"
                   />
