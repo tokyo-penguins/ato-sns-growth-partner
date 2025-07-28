@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Instagram, Twitter, Youtube } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="bg-foreground text-white py-20">
+  return (
+    <footer className="bg-foreground text-white py-20">
       <div className="container mx-auto px-6">
         {/* CTA Section */}
         <div className="text-center mb-16">
@@ -15,10 +17,19 @@ const Footer = () => {
                 無料相談で、あなたのビジネスに最適なSNS戦略をご提案いたします
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold"
+                >
                   無料相談を申し込む
                 </Button>
-                
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold"
+                >
+                  資料をダウンロード
+                </Button>
               </div>
             </CardContent>
           </Card>
@@ -113,6 +124,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
